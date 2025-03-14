@@ -43,5 +43,21 @@ public class Calculator { //This defines the calculator class, which contains ou
                     System.out.println("Invalid operator. Please try again");// If the operator is wrong.
                     continue; // Restart the loop without showing a result.
             }
+            // Display result
+            System.out.println("Result: " + result); // Print the final result.
+
+            // Ask if the user wants to continue
+            System.out.println("Do you want to continue");// Ask if they want to keep using the calculator.
+            String choice = scanner.next().toLowerCase();// Read the answer and convert it to lowercase.
+
+            if ( choice.equals("no")) {// If the user typed "yes", the loop repeats.
+                break;    //Exits the loop immediately.
+            }
+        }
+        scanner.close();// Close the scanner to free resources.
+        System.out.println("Calculator closed");// Print a message when exiting.
+    }
+}
+
 
 
